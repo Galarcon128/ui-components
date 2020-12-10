@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./pages/input/input";
+import Output from "./pages/output/output";
 import { Tabs, Cover } from "./components/ui-components/ui_components";
 
 const tabsInfo = [
@@ -14,7 +15,11 @@ export default function App() {
       <Cover>
         <h1>RegulonDB ui-components</h1>
       </Cover>
-      <Tabs tabSelect={"01"} tabsInfo={tabsInfo} tabs={[<Input id="01" />]} />
+      <Tabs
+        tabSelect={"01"}
+        tabsInfo={tabsInfo}
+        tabs={[<Input id="01" />, <Output id="02" />]}
+      />
     </div>
   );
 }
