@@ -4,7 +4,7 @@ import {
   IconButton,
   DropDown,
   Split
-} from "../../components/ui-components/ui_components";
+} from "../../ui-components/ui_components";
 
 export default function Buttons() {
   return (

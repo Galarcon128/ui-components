@@ -2,7 +2,7 @@ import React from "react";
 import Buttons from "./buttons";
 import Selectors from "./selectors";
 import Text from "./text";
-import { Tabs } from "../../components/ui-components/ui_components";
+import { Tabs } from "../../ui-components/ui_components";
 
 const tabsInfo = [
   { id: "input1", name: "Buttons", disabled: false },

@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "./pages/input/input";
-import Output from "./pages/output/output";
+import Input from "./components/pages/input/input";
+import Output from "./components/pages/output/output";
 import { Tabs, Cover } from "./components/ui-components/ui_components";
 
 const tabsInfo = [

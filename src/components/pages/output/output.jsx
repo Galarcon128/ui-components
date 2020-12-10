@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-import { Tabs } from "../../components/ui-components/ui_components";
+import { Tabs } from "../../ui-components/ui_components";
 
 const tabsInfo = [
   { id: "o1", name: "Card", disabled: false },

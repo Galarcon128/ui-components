@@ -2,7 +2,7 @@ import React from "react";
 import {
   RadioButtonGroup,
   CheckBoxGroup
-} from "../../components/ui-components/ui_components";
+} from "../../ui-components/ui_components";
 
 export default function Buttons() {
   return (

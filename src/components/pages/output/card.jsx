@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../../components/ui-components/ui_components";
+import { Card } from "../../ui-components/ui_components";
 
 export default function Buttons() {
   return (

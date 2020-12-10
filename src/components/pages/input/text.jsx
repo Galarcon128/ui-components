@@ -3,7 +3,7 @@ import {
   TextBox,
   TextPassword,
   TextArea
-} from "../../components/ui-components/ui_components";
+} from "../../ui-components/ui_components";
 
 const Text = () => {
   const [_text1, set_text1] = useState("Hola");
