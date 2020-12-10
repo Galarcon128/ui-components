@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./regulonDB_global.css";
 
 import App from "./App";
 
