@@ -1,8 +1,7 @@
 import React from "react";
 import {
   RadioButtonGroup,
-  CheckBoxGroup,
-  CheckBox
+  CheckBoxGroup
 } from "../../components/ui-components/ui_components";
 
 export default function Buttons() {
@@ -19,9 +18,8 @@ export default function Buttons() {
         }}
       />
       <h3>CheckBox</h3>
-      <CheckBox
-        label="Selecction"
-        value="Value"
+      <CheckBoxGroup
+        arrayOptions={["option 1"]}
         onChange={(op) => {
           console.log(op);
           alert(op);
