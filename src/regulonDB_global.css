@@ -90,7 +90,6 @@ h1 {
   font-weight: var(--fontWeight);
   line-height: var(--fontWeight);
   color: var(--color-rest);
-  margin-top: 0;
 }
 
 .h1-cover {

@@ -1,4 +1,7 @@
-// uiComponents Input
+// ui-components
+/*
+version control 0.0.5
+*/
 
 import { Button, IconButton, DropDown, Split } from "./input/Buttons";
 import { RadioButtonGroup, CheckBoxGroup } from "./input/Selectors";
@@ -8,8 +11,10 @@ import { Image, Card, Modal } from "./output/output";
 
 import { Cover } from "./web/cover/cover";
 import { Tabs } from "./web/tab/tabs";
+import Header from "./web/layout/header";
 
 export {
+  Header,
   Button,
   IconButton,
   DropDown,
