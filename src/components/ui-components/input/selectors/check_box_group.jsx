@@ -65,37 +65,34 @@ const warnMenssage =
   'CheckboxGroup does not have an added function for the change in prop "onChange"';
 
 const CheckBoxGroup = ({
+  id,
   arrayOptions = [],
-  arraySelectOptions = [],
+  selectOptions = [],
   arrayDisabledOptions = [],
   title = "",
   onChange = () => {
     console.warn(warnMenssage);
   }
 }) => {
-  const [selectOptions, setOption] = useState(arraySelectOptions);
+  const [_select, set_select] = useState(selectOptions);
 
-  const onChangeSelection = (value, options) => {
-    //console.log(selectOptions)
-    if (isSelect(value)) {
-      const indx = options.indexOf(value);
-      options.splice(indx, 1);
-      setOption(options);
+  const onChangeSelection = (option) => {
+    let select = [..._select];
+    if (isCheck(option)) {
+      select = select.filter((item) => item !== option);
     } else {
-      options.push(value);
-      setOption(options);
+      select.push(option);
     }
-    onChange(selectOptions);
-    //console.log(selectOptions)
+    set_select(select);
+    onChange(select);
   };
 
-  const isSelect = (value) => {
-    if (selectOptions.find((element) => element === value)) {
+  const isCheck = (value) => {
+    if (_select.find((element) => element === value)) {
       return true;
     }
     return false;
   };
-
   const isDisable = (value) => {
     if (arrayDisabledOptions.find((element) => element === value)) {
       return true;
@@ -111,17 +108,19 @@ const CheckBoxGroup = ({
         </tr>
       </thead>
       <tbody>
-        {arrayOptions.map((option) => {
+        {arrayOptions.map((option, index) => {
+          //console.log(option.id);
           return (
-            <tr key={option}>
+            <tr key={`op-${option}-${index}`}>
               <td>
                 <CheckBox
+                  id={`cb-${id}-${option}-${index}`}
                   label={option}
                   value={option}
                   disabled={isDisable(option)}
-                  isCheck={isSelect(option)}
+                  isCheck={isCheck(option)}
                   onChange={() => {
-                    onChangeSelection(option, selectOptions);
+                    onChangeSelection(option);
                   }}
                 />
               </td>

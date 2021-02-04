@@ -12,11 +12,11 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Cover>
+      <Cover id={"principal-cover"}>
         <h1>User Interface Components</h1>
       </Cover>
       <Tabs
-        tabSelect={"01"}
+        tabSelect={"02"}
         tabsInfo={tabsInfo}
         tabs={[<Input id="01" />, <Output id="02" />]}
       />

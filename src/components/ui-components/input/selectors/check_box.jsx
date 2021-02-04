@@ -85,7 +85,7 @@ const CheckBox = ({
   }
 }) => {
   const [check, setCheck] = useState(isCheck);
-
+  //console.log(check);
   return (
     <label className={Styles.checkLabel}>
       <div className={Styles.checkText}>{label}</div>
@@ -94,8 +94,8 @@ const CheckBox = ({
         type="checkbox"
         checked={check}
         onChange={() => {
-          setCheck(!check);
           onChange(value);
+          setCheck(!check);
         }}
         value={value}
       />
