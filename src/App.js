@@ -16,7 +16,7 @@ export default function App() {
         <h1>User Interface Components</h1>
       </Cover>
       <Tabs
-        tabSelect={"02"}
+        tabSelect={"01"}
         tabsInfo={tabsInfo}
         tabs={[<Input id="01" />, <Output id="02" />]}
       />

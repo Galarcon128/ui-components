@@ -8,13 +8,17 @@ export const Tabs = ({
     { id: "02", name: "tab2", disabled: false }
   ],
   tabSelect = "01",
-  tabs = [<div id="01">contenido 1 </div>, <div id="02"> contenido 2 </div>]
+  tabs = [<div id="01">contenido 1 </div>, <div id="02"> contenido 2 </div>],
+  backgroundColor = "#d5e2ead7"
 }) => {
   const [_tab, set_tab] = useState(tabSelect);
 
   return (
     <div>
-      <nav className={Style.tabHeader}>
+      <nav
+        className={Style.tabHeader}
+        style={{ backgroundColor: backgroundColor }}
+      >
         {tabsInfo.map((tab) => {
           let styleTab = style_Tab;
           if (tab.id === _tab) {
